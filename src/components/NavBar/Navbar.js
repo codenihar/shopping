@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = (props) => {
-    const {onSearchInputChange} = props
+    const {onSearchButtonClick} = props
+    const [searchQuery, setSearchQuery] = useState('')
     const handleInputChange=(e)=>{
         const query=e.target.value;
-        onSearchInputChange(query)
+        setSearchQuery(query)
+    }
+    const handleSearchClick =(e)=>{
+        e.preventDefault()
+        onSearchButtonClick(searchQuery)
+        setSearchQuery('')
     }
     return (
         <div>
@@ -37,9 +43,9 @@ const Navbar = (props) => {
                                 </ul>
                             </li>
                         </ul>
-                        <form className="d-flex" role="search">
+                        <form className="d-flex" role="search" onSubmit={handleSearchClick}>
                             <input className="form-control me-2" type="text" placeholder="Search" aria-label="Search" onChange={handleInputChange} />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
+                            <button className="btn btn-outline-success" type="submit" onClick={handleSearchClick}>Search</button>
                         </form>
                     </div>
                 </div>

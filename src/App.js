@@ -16,7 +16,7 @@ const App = () => {
     setFilteredProducts(productsData);
   }, []);
 
-  const handleSearchInputChange = (query) => {
+  const handleSearchButtonClick = (query) => {
     const filtered = products.filter(product=>
       product.name.toLowerCase().includes(query.toLowerCase())
     );
@@ -24,7 +24,7 @@ const App = () => {
   }
   return (
     <BrowserRouter>
-      <Navbar onSearchInputChange={handleSearchInputChange} />
+      <Navbar onSearchButtonClick={handleSearchButtonClick} />
       <div className="container">
         <Routes>
           <Route path="/" element={<Home auth={{ isAuth: true }} />}></Route>
