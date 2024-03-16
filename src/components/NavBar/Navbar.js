@@ -1,18 +1,38 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = (props) => {
     const {onSearchButtonClick} = props
     const [searchQuery, setSearchQuery] = useState('')
+
+
     const handleInputChange=(e)=>{
         const query=e.target.value;
         setSearchQuery(query)
     }
+
+
     const handleSearchClick =(e)=>{
-        e.preventDefault()
-        onSearchButtonClick(searchQuery)
-        setSearchQuery('')
+            e.preventDefault()
+            onSearchButtonClick(searchQuery)
+            setSearchQuery(searchQuery)
     }
+
+
+    useEffect(() => {
+      const handleKeyPress=(e)=>{
+        if(e.key === 'Enter'){
+            e.preventDefault();
+            onSearchButtonClick(searchQuery)
+        }
+      }
+      document.addEventListener('keydown', handleKeyPress);
+      return () => {
+        document.removeEventListener('keydown', handleKeyPress);
+
+      }
+    }, [handleSearchClick])
+    
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -44,7 +64,7 @@ const Navbar = (props) => {
                             </li>
                         </ul>
                         <form className="d-flex" role="search" onSubmit={handleSearchClick}>
-                            <input className="form-control me-2" type="text" placeholder="Search" aria-label="Search" onChange={handleInputChange} />
+                            <input className="form-control me-2" type="text" placeholder="Search" aria-label="Search" value={searchQuery} onChange={handleInputChange}/>
                             <button className="btn btn-outline-success" type="submit" onClick={handleSearchClick}>Search</button>
                         </form>
                     </div>
