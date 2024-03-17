@@ -13,9 +13,9 @@ const Navbar = (props) => {
 
 
     const handleSearchClick =(e)=>{
-            e.preventDefault()
-            onSearchButtonClick(searchQuery)
-            setSearchQuery(searchQuery)
+        e.preventDefault()
+        onSearchButtonClick(searchQuery)
+        setSearchQuery(searchQuery)
     }
 
 
