@@ -27,8 +27,8 @@ const App = () => {
       <Navbar onSearchButtonClick={handleSearchButtonClick} />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Home auth={{ isAuth: true }} />}></Route>
-          <Route path="/login" element={<Login auth={{ isAuth: true }} />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/login" element={<Login />}></Route>
           <Route path="/products" element={<Products products={filteredProducts} />} />
         </Routes>
       </div>

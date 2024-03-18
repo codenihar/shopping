@@ -1,16 +1,18 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
+import { useNavigate } from 'react-router-dom';
 
-function Login(props) {
-    const {auth}=props;
-    if(auth.isAuth===true){
-        return <Navigate to="/" replace={true}/>
-    }else{
-        return(
-            <h1>Login Page</h1>
-        )
-    }
-  
+const Login = () => {
+  const {isAuthenticated,loginWithRedirect} = useAuth0();
+  const navigate = useNavigate();
+  if(!isAuthenticated){
+    return(
+      <button onClick={()=>loginWithRedirect()}>Login</button>
+    )
+  }
+  else{
+    navigate("/");
+  }
 };
 
 export default Login;
