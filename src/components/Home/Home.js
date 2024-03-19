@@ -1,15 +1,27 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
 
-function Home(props){
-    const {auth}=props;
-    if(auth.isAuth===true){
-        return(
-            <h1>Home Page</h1>
-        )
-    }
-    else{
-        return <Navigate to="/login" replace={true}/>
-    }
+function Home(props) {
+  const { logout, isAuthenticated } = useAuth0();
+  const navigate = useNavigate();
+
+  if (!isAuthenticated) {
+    navigate("/login");
+  } else {
+    return (
+      <div>
+        <h1>Home Page</h1>
+        <button
+          onClick={() =>
+            logout({ logoutParams: { returnTo: window.location.origin } })
+          }
+        >
+          LogOut
+        </button>
+      </div>
+    );
+  }
 }
-export default Home
+
+export default Home;
