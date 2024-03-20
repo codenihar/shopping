@@ -6,12 +6,9 @@ import { Link } from 'react-router-dom';
 
 function Products(props) {
     const {products} = props
-    // const [productId, setProductId] = useState(0)
+    // const [productId, setProductId] = useState(null)
 
-    // const handleBuyClick = () => {
-    //     // setProductId(query)
-    //     console.log()
-    // }
+    
     return (
         <div>
             {/* <h1 className="page-title">Products</h1> */}
@@ -21,7 +18,7 @@ function Products(props) {
                         <img src={product.image} alt={product.name} />
                         <h3>{product.name}</h3>
                         <Link to={`/products/${product.id}`} className="button-link">
-                            View Details
+                            Buy Now
                         </Link>
                         {/* <button onClick={setProductId(id)}>
                             {product.buyButton.text}
