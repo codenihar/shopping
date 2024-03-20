@@ -5,6 +5,7 @@ import Login from "./components/Login/Login";
 import Products from "./components/Products/Products";
 import Navbar from "./components/NavBar/Navbar";
 import { productsData } from "./components/Products/ProductData";
+import Product from "./components/Products/Product"
 
 
 const App = () => {
@@ -27,9 +28,10 @@ const App = () => {
       <Navbar onSearchButtonClick={handleSearchButtonClick} />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/products" element={<Products products={filteredProducts} />} />
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/products" element={<Products products={filteredProducts} />} />
+          <Route path="/products/:productId" element={<Product />} /> 
         </Routes>
       </div>
     </BrowserRouter>

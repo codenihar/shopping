@@ -9,6 +9,7 @@ export const productsData = [
                 // Function to handle buy button click for Product A
             },
         },
+        price: '1000',
     },
     {
         id: 2,
