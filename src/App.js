@@ -24,10 +24,7 @@ const App = () => {
     setFilteredProducts(filtered)
   }
 
-  const getProductDetailsById = (id) => {
-    const clickProduct = filteredProducts.find((item) => item.id === parseInt(id));
-    return clickProduct ? { name: clickProduct.name, price: clickProduct.price } : null;
-  };
+  
   // console.log(getProductDetailsById)
   return (
     <BrowserRouter>
@@ -37,7 +34,7 @@ const App = () => {
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/login" element={<Login />}></Route>
           <Route exact path="/products" element={<Products products={filteredProducts} />} />
-          <Route exact path="/products/:productId" element={<Product fetchedDetails={getProductDetailsById(1) } />} /> 
+          <Route exact path="/products/:productId" element={<Product />} /> 
           {/* <Route exact path="/products/:productId" element={<Product productName={products.name} productImage={products.image} productPrice={products.price} />} />  */}
         </Routes>
       </div>

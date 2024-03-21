@@ -101,3 +101,10 @@
     background-color: #0056b3;
   }
   
+  .productbg{
+    justify-content: center;
+    align-items: center;
+  }
+  .card{
+    width: 50vw;
+  }
