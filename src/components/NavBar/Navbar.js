@@ -31,7 +31,7 @@ const Navbar = (props) => {
         document.removeEventListener('keydown', handleKeyPress);
 
       }
-    }, [handleSearchClick])
+    }, [handleSearchClick ,onSearchButtonClick ,searchQuery])
     
     return (
         <div>
@@ -45,6 +45,9 @@ const Navbar = (props) => {
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <Link className="nav-link" to="/products">Products</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/cart">Cart</Link>
                             </li>
                         </ul>
                         <form className="d-flex" role="search" onSubmit={handleSearchClick}>
