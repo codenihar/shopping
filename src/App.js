@@ -12,7 +12,7 @@ import Cart from "./components/Cart/Cart";
 const App = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [cartItems, setCartItems] = useState([])
+  const [cartItems, setCartItems] = useState({})
 
   useEffect(() => {
     setProducts(productsData);
@@ -29,9 +29,11 @@ const App = () => {
   const addToCart = (productId) => {
     const productToAdd = products.find(product => product.id === productId);
     if (productToAdd) {
-      setCartItems([...cartItems, productToAdd]);
+      setCartItems(prevCartItems => ({
+        ...prevCartItems,
+        [productId]: productToAdd, // Add the complete product object
+      }));
     }
-    // console.log(cartItems)
   };
   // console.log(getProductDetailsById)
   return (
