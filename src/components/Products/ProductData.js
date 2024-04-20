@@ -9,6 +9,7 @@ export const productsData = [
                 // Function to handle buy button click for Product A
             },
         },
+        price: 1000,
     },
     {
         id: 2,
@@ -20,6 +21,7 @@ export const productsData = [
                 // Function to handle buy button click for Product B
             },
         },
+        price: 2000,
     },
     {
         id: 3,
@@ -31,6 +33,7 @@ export const productsData = [
                 // Function to handle buy button click for Product C
             },
         },
+        price: 2000,
     },
     {
         id: 4,
@@ -42,6 +45,7 @@ export const productsData = [
                 // Function to handle buy button click for Product D
             },
         },
+        price: 2000,
     },
     {
         id: 5,
@@ -53,6 +57,7 @@ export const productsData = [
                 // Function to handle buy button click for Product E
             },
         },
+        price: 2000,
     },
     {
         id: 6,
@@ -64,6 +69,7 @@ export const productsData = [
                 // Function to handle buy button click for Product F
             },
         },
+        price: 2000,
     },
     {
         id: 7,
@@ -75,6 +81,7 @@ export const productsData = [
                 // Function to handle buy button click for Product G
             },
         },
+        price: 2000,
     },
     {
         id: 8,
@@ -86,6 +93,7 @@ export const productsData = [
                 // Function to handle buy button click for Product H
             },
         },
+        price: 2000,
     },
     {
         id: 9,
@@ -97,6 +105,7 @@ export const productsData = [
                 // Function to handle buy button click for Product I
             },
         },
+        price: 2000,
     },
     {
         id: 10,
@@ -108,6 +117,7 @@ export const productsData = [
                 // Function to handle buy button click for Product J
             },
         },
+        price: 2000,
     },
     {
         id: 11,
@@ -119,6 +129,7 @@ export const productsData = [
                 // Function to handle buy button click for Product K
             },
         },
+        price: 2000,
     },
     {
         id: 12,
@@ -130,6 +141,7 @@ export const productsData = [
                 // Function to handle buy button click for Product L
             },
         },
+        price: 2000,
     },
     {
         id: 13,
@@ -141,6 +153,7 @@ export const productsData = [
                 // Function to handle buy button click for Product M
             },
         },
+        price: 2000,
     },
     {
         id: 14,
@@ -152,6 +165,7 @@ export const productsData = [
                 // Function to handle buy button click for Product N
             },
         },
+        price: 2000,
     },
     {
         id: 15,
@@ -163,6 +177,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 16,
@@ -174,6 +189,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 17,
@@ -185,6 +201,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 18,
@@ -196,6 +213,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 19,
@@ -207,6 +225,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 20,
@@ -218,6 +237,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 21,
@@ -229,6 +249,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 22,
@@ -240,6 +261,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 23,
@@ -251,6 +273,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 24,
@@ -262,6 +285,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 25,
@@ -273,6 +297,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 26,
@@ -284,6 +309,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 27,
@@ -295,6 +321,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 28,
@@ -306,6 +333,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 29,
@@ -317,6 +345,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 30,
@@ -328,6 +357,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 31,
@@ -339,6 +369,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 32,
@@ -350,6 +381,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 33,
@@ -361,6 +393,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 34,
@@ -372,6 +405,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 35,
@@ -383,6 +417,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 36,
@@ -394,6 +429,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 37,
@@ -405,6 +441,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 38,
@@ -416,6 +453,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 39,
@@ -427,6 +465,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 40,
@@ -438,6 +477,7 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
     {
         id: 41,
@@ -449,5 +489,6 @@ export const productsData = [
                 // Function to handle buy button click for Product O
             },
         },
+        price: 2000,
     },
 ];
