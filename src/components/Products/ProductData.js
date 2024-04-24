@@ -492,3 +492,6 @@ export const productsData = [
         price: 2000,
     },
 ];
+productsData.forEach((product, index) => {
+    product.image = `https://picsum.photos/seed/${index + 1}/200/300`;
+});
