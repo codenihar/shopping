@@ -16,10 +16,10 @@ function Products(props) {
   return (
     <div>
       {/* <h1 className="page-title">Products</h1> */}
-      <div className="container-fluid justify-content-center text-center align-items-center">
+      <div className="container-fluid justify-content-center align-items-center">
         <div class="row">
           {products.map((product) => (
-            <div className="col-12 col-md-6 col-lg-4 my-3 g-5">
+            <div className="col-6 col-md-4 col-lg-3 my-3 g-3">
               <div
                 key={product.id}
                 className="card border-light shadow w-100 mb-3"
@@ -29,11 +29,39 @@ function Products(props) {
                   alt={product.name}
                   className="card-top-img w-100"
                   id="productsImg"
-                  style={{ height: "200px;" }}
                 />
                 <div className="card-body">
-                  <h3 className="card-title">{product.name}</h3>
-                  <div className="mt-4 mb-3">
+                  <div className="card-title" id="productTitle">
+                    {product.name}
+                  </div>
+
+                  <div className="card-text" id="productText">
+                    {product.subtitle}
+                  </div>
+
+                  <div className="priceText mt-3">
+                    <div className="card-text" id="priceOffer">
+                      ₹{product.offerprice}
+                    </div>
+
+                    <div className="card-text mx-2" id="priceOriginal">
+                      ₹{product.originalprice}
+                    </div>
+
+                    <div className="" id="discount">
+                      {product.discount}% OFF
+                    </div>
+                  </div>
+
+                  <div className="mt-4 mb-3 text-center">
+                    <a
+                      // onClick={() => addToFavCallprop(product.id)}
+                      className="mx-3"
+                      id="favHover"
+                    >
+                      <i class="fa fa-heart"></i>
+                    </a>
+
                     <Link
                       to={`/products/${product.id}`}
                       className="mx-2 mb-2"
@@ -41,13 +69,15 @@ function Products(props) {
                     >
                       Buy Now
                     </Link>
-                    <button
+
+                    <a
                       onClick={() => addToCartCallprop(product.id)}
-                      className="mx-2"
-                      id="button"
+                      className="mx-3"
+                      id="iconHover"
                     >
-                      Add to Cart
-                    </button>
+                      <i className="fa fa-shopping-cart"></i>
+                    </a>
+
                     {/* <button onClick={setProductId(id)}>
                             {product.buyButton.text}
                         </button> */}

@@ -1,32 +1,38 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   text-decoration: none;
   border: none;
   outline: none;
   scroll-behavior: smooth;
   font-family: "Poppins", "sans-serif";
-} */
+}
 
 :root {
   --main-color: #1f242d;
   --second-color: #323946;
   --text-color: #fff;
-  --second-main-color: rgb(0, 204, 255);
+  --light-color: #4d4d4d;
+  --second-main-color: rgb(255, 136, 0);
   --light-black: #222222;
   --black: #000000;
+  --price-color: #03753c;
+  --price-second-color: #e5f7ee;
+  --orange-color: rgb(255, 106, 0);
+}
+
+span {
+  color: var(--light-color) !important;
+  font-size: 1rem !important;
 }
 
 #button {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 2.5rem;
   background: transparent;
   border: 1px solid var(--second-color);
   border-radius: 6rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--second-color);
   letter-spacing: 0.1rem;
   font-weight: 500;
@@ -39,4 +45,17 @@
 
 a {
   text-decoration: none !important;
+}
+
+#iconHover i {
+  text-decoration: none;
+  color: var(--second-color);
+  transform: scale(1.5);
+  transition: all 0.3s linear;
+}
+
+#iconHover:hover i {
+  color: var(--orange-color);
+  cursor: pointer;
+  transform: scale(1.2);
 }
