@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { productsData } from "./ProductData";
-import './Products.css';
+import "./Products.css";
 
 const Product = () => {
-  const { productId } = useParams()
+  const { productId } = useParams();
   // const { productName, productImage, productPrice } = props;
   // const {fetchedDetails} = props
-  const [productDetails, setProductDetails] = useState([])
+  const [productDetails, setProductDetails] = useState([]);
 
   // const getProductDetailsById = (productId) => {
   //   const clickProduct = productsData.find((item) => item.id === parseInt(productId));
@@ -16,10 +16,12 @@ const Product = () => {
   // console.log(getProductDetailsById)
   // console.log(productName, productPrice)
   useEffect(() => {
-    const clickProduct = productsData.find((item) => item.id === parseInt(productId));
+    const clickProduct = productsData.find(
+      (item) => item.id === parseInt(productId)
+    );
     console.log("Component mounted or updated with productId:", productId);
-    setProductDetails(clickProduct)
-  }, [productId])
+    setProductDetails(clickProduct);
+  }, [productId]);
   // console.log(productDetails)
   return (
     // <div>
@@ -34,7 +36,11 @@ const Product = () => {
     // </div>
     <div className="container productbg row">
       <div className="card">
-        <img src={productDetails.image} className="card-img-top" alt={productDetails.name} />
+        <img
+          src={productDetails.image}
+          className="card-img-top"
+          alt={productDetails.name}
+        />
         <div className="card-body">
           <h5 className="card-title">{productDetails.name}</h5>
           <p className="card-text">{productDetails.price}</p>
@@ -45,12 +51,16 @@ const Product = () => {
           <li className="list-group-item">A third item</li>
         </ul>
         <div className="card-body">
-          <Link to="/" className="card-link">Card link</Link>
-          <Link to="/" className="card-link">Another link</Link>
+          <Link to="/" className="card-link button">
+            Card link
+          </Link>
+          <Link to="/" className="card-link ">
+            Another link
+          </Link>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
